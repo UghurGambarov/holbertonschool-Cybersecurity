@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(lsb_release -is) $1"
+lsb_release -is

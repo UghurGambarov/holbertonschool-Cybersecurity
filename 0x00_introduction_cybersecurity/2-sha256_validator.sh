@@ -1,3 +1,2 @@
 #!/bin/bash
-if {{$sha256sum "$1"}} == "$2": echo OK
-else: echo NOT OK
+[ "$(sha256sum "$1" | cut -d' ' -f1)" = "$2" ] && echo "$1: OK"
